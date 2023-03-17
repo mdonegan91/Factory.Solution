@@ -6,6 +6,7 @@ namespace Factory.Models
   public class Machine
   {
     public int MachineId { get; set; }
+    [Required(ErrorMessage = "Please enter a specialty")]
     public string MachineName { get; set; }
     public string Details { get; set; }
     public List<EngineerMachine> JoinEntities { get; }

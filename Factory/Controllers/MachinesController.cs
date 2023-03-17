@@ -32,24 +32,22 @@ namespace Factory.Controllers
 
     public ActionResult Create()
     {
-      ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "EngineerName");
       return View();
     }
 
     [HttpPost]
-    public ActionResult Create(Machine machine, int engineerId)
+    public ActionResult Create(Machine machine)
     {
+      if (!ModelState.IsValid)
+      {
+        return View(machine);
+      }
+      else
+      {
       _db.Machines.Add(machine);
       _db.SaveChanges();
-      #nullable enable
-      EngineerMachine? joinEntity = _db.EngineerMachines.FirstOrDefault(join => (join.EngineerId == engineerId && join.MachineId == machine.MachineId));
-      #nullable disable
-      if (joinEntity == null && engineerId != 0)
-      {
-        _db.EngineerMachines.Add(new EngineerMachine() { EngineerId = engineerId, MachineId = machine.MachineId });
-        _db.SaveChanges();
-      }
       return RedirectToAction("Index");
+      }
     }
 
     public ActionResult AddEngineer(int id)

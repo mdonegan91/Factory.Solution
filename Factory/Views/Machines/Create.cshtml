@@ -8,14 +8,11 @@
 
 @using (Html.BeginForm())
 {
-    <p> Machine Name @Html.TextBoxFor(model => model.MachineName)</p>
+    <p>Machine Name: @Html.TextBoxFor(model => model.MachineName)
 
-    <p>Machine Details @Html.TextBoxFor(model => model.Details)</p>
-    
-    @Html.Label("Add an engineer")
-    @Html.DropDownList("EngineerId")<br><br>
+    Machine Details @Html.TextBoxFor(model => model.Details)
 
-    <input type="submit" value="Add new Machine"/>
+    <input type="submit" value="Add new Machine"/></p>
 }
 
 <p>@Html.ValidationMessageFor(model => model.MachineName, "", new { @class = "text-danger", @style = "font-weight: 600;" })</p>

@@ -30,9 +30,16 @@ namespace Factory.Controllers
     [HttpPost]
     public ActionResult Create(Specialty specialty)
     {
+      if (!ModelState.IsValid)
+      {
+        return View(specialty);
+      }
+      else
+      {
       _db.Specialties.Add(specialty);
       _db.SaveChanges();
       return RedirectToAction("Index");
+      }
     }
 
     public ActionResult Edit(int id)
