@@ -1,10 +1,10 @@
-# _Dr. Sillystringz's Factory_
+# 🏭 Dr. Sillystringz's Factory 🏭
 
 #### By Molly Donegan
 
 #### _An MVC web application to keep track of machine repairs._
 
-## Technologies Used
+## 🪛 Technologies Used 🪛
 
 * _C#_
 * _.NET_
@@ -12,7 +12,7 @@
 * _SQL Workbench_
 * _Entity Framework_
 
-## Description
+## 🔩 Description 🔩
 
 A factory manager can use the website to do the following:
 
@@ -22,7 +22,7 @@ A factory manager can use the website to do the following:
 
 * Specify which engineers are licensed to repair which machines
 
-## How To Run This Project
+## 🔧 How To Run This Project 🔧
 
 ### Install Tools
 
@@ -47,13 +47,13 @@ Install the tools that are introduced in [this series of lessons on LearnHowToPr
 6. Within the production directory "FActory", run `dotnet watch run` in the command line to start the project in development mode with a watcher.
 4. Open the browser to _https://localhost:5001_. If you cannot access localhost:5001 it is likely because you have not configured a .NET developer security certificate for HTTPS. To learn about this, visit: [Redirecting to HTTPS and Issuing a Security Certificate](https://www.learnhowtoprogram.com/lessons/redirecting-to-https-and-issuing-a-security-certificate).
 
-## Known Bugs
+## ⚙️ Known Bugs ⚙️
 
 * _NA_
 
 * _Please reach out with any questions or concerns to [mollyrdonegan@gmail.com](mollyrdonegan@gmail.com)_
 
-## License
+## 🧰 License 🧰
 
 _[MIT](https://github.com/mdonegan91/Factory.Solution/blob/main/LICENSE)_
 
