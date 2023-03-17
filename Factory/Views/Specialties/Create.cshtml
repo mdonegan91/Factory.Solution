@@ -10,8 +10,7 @@
 <h4>Add a new Specialty</h4>
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.SpecialtyName)
-  @Html.TextBoxFor(model => model.SpecialtyName)
+  <p>Specialty Name: @Html.TextBoxFor(model => model.SpecialtyName)</p>
   <input type="submit" value="Add new specialty" />
 }
 
