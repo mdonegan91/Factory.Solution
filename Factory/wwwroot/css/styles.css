@@ -20,10 +20,6 @@ div#main-text{
   margin-right: 10%;
 }
 
-div#nav-links{
-  text-align: center;
-}
-
 div#footer {
   position:fixed;
   bottom:0px;

@@ -18,7 +18,7 @@ else
     <li>@Html.ActionLink($"{engineer.EngineerName}", "Details", new { id = engineer.EngineerId }) | 
       @foreach(EngineerSpecialty join in engineer.JoinEntities2)
       {
-        @Html.ActionLink($"{join.Specialty.SpecialtyName} + ", "Details", "Specialties", new {id = join.Specialty.SpecialtyId} )
+        @Html.ActionLink($"{join.Specialty.SpecialtyName}", "Details", "Specialties", new {id = join.Specialty.SpecialtyId} )
       }
     </li>
   }

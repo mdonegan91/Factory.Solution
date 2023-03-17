@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Specialty
+
+<p>@Html.ValidationMessageFor(model => model.SpecialtyId, "", new { @class = "text-danger", @style = "font-weight: 600",})</p>
+<p>@Html.ValidationMessageFor(model => model.SpecialtyName, "", new { @class = "text-danger", @style = "font-weight: 600",})</p>
+
+<h4>Add a new Specialty</h4>
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.SpecialtyName)
+  @Html.TextBoxFor(model => model.SpecialtyName)
+  <input type="submit" value="Add new specialty" />
+}
+
+<br>
+<div id="nav-links">
+  <p>@Html.ActionLink("Back to List of Specialties", "Index")</p>
+</div>

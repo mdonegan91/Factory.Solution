@@ -1,0 +1,37 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Specialty;
+@using Factory.Models;
+
+<h2>Specialty Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.SpecialtyName): @Html.DisplayFor(model => model.SpecialtyName)</h3>
+
+@if(@Model.JoinEntities2.Count == 0)
+{
+  <p>This Specialty does not belong to any Engineers</p>
+}
+else
+{
+  <h4>Engineers this specialty belongs to:</h4>
+
+  <ul>
+  @foreach(EngineerSpecialty join in Model.JoinEntities2)
+  {
+    <li>@join.Engineer.EngineerName</li>
+    @using (Html.BeginForm("DeleteJoin", "Specialty"))
+    {
+      @Html.Hidden("joinId", @join.EngineerSpecialtyId)
+      <input type="submit" value="Delete"/>
+    }
+  }
+  </ul>
+}
+
+<br>
+<div id="nav-links">
+  <p>@Html.ActionLink("Edit Specialty", "Edit", new { id = Model.SpecialtyId }) | @Html.ActionLink("Delete Specialty", "Delete", new { id = Model.SpecialtyId }) | @Html.ActionLink("Add new engineer", "Create", "Engineers")</p>
+  <p>@Html.ActionLink("Back to List of Specialties", "Index")</p>
+</div>
