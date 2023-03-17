@@ -51,7 +51,7 @@ Install the tools that are introduced in [this series of lessons on LearnHowToPr
 
 * _NA_
 
-_Please reach out with any questions or concerns to [mollyrdonegan@gmail.com](mollyrdonegan@gmail.com)_
+_Please reach out with any questions or concerns [mollyrdonegan@gmail.com](mollyrdonegan@gmail.com)_
 
 ## 🧰 License 🧰
 
