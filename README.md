@@ -22,35 +22,30 @@ A factory manager can use the website to do the following:
 
 * Specify which engineers are licensed to repair which machines
 
-## Setup/Installation Requirements
+## How To Run This Project
 
-* _Clone this repo._
-* _Open your terminal (e.g., Terminal or GitBash) and navigate to this project's production directory called "Factory"._
-* _In the command line, run the command ``dotnet run`` to compile and execute the application._
-* _Optionally, you can run ``dotnet build`` to compile this app without running it._
-* _This program was built using `Microsoft .NET SDK 6.0`, and may not be compatible with other versions._
-* _If you want to run the project in production mode with a watcher, you can use a command line flag to specify that you want to run the "production" profile. ``dotnet watch run --launch-profile "production"``_
-*  _Open the browser to [https://localhost:5001]. If you cannot access localhost:5001 it is likely because you have not configured a .NET developer security certificate for HTTPS. To learn about this, visit: [Redirecting to HTTPS and Issuing a Security Certificate.](https://www.learnhowtoprogram.com/c-and-net/basic-web-applications/redirecting-to-https-and-issuing-a-security-certificate)_
+### Install Tools
 
-## SQL Workbench Configuration
-* _Create an `appsetting.json` file in the "Factory" directory of the project._
-* _Within `appsettings.json`, put in the following code, replacing the `uid` and `pwd` values with your own username and password for MySQL._ 
+Install the tools that are introduced in [this series of lessons on LearnHowToProgram.com](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c).
+
+### Set Up and Run Project
+
+1. Clone this repo.
+2. Open the terminal and navigate to this project's production directory called "Factory".
+3. Within the production directory "Factory", create a new file called `appsettings.json`.
+4. Within `appsettings.json`, put in the following code, replacing the `uid` and `pwd` values with your own username and password for MySQL. 
+
 ```json
 {
-    "ConnectionStrings": {
-        "DefaultConnection": "Server=localhost;Port=3306;database=factory;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"
-    }
+  "ConnectionStrings": {
+      "DefaultConnection": "Server=localhost;Port=3306;database=factory;uid=root;pwd=epicodus;"
+  }
 }
 ```
-* _If you'd like to push this cloned project to a public-facing repository, remember to add the appsettings.json file to your .gitignore first._
 
-## Entity Framework Migration Configuration
-
-* _In root directory of project folder "Factory",  run $ dotnet ef database update_
-* _Open SQL Workbench._
-* _Navigate to "factory" schema._
-* _Click the drop down, select "Tables" drop down._
-* _Verify the tables. There should be: engineers, engineermachines, and machines._
+5. Create the database using the migrations in the Factory project. Open your shell (e.g., Terminal or GitBash) to the production directory "Factory", and run `dotnet ef database update`. 
+6. Within the production directory "FActory", run `dotnet watch run` in the command line to start the project in development mode with a watcher.
+4. Open the browser to _https://localhost:5001_. If you cannot access localhost:5001 it is likely because you have not configured a .NET developer security certificate for HTTPS. To learn about this, visit: [Redirecting to HTTPS and Issuing a Security Certificate](https://www.learnhowtoprogram.com/lessons/redirecting-to-https-and-issuing-a-security-certificate).
 
 ## Known Bugs
 
