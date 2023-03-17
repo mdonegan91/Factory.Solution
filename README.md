@@ -1,6 +1,6 @@
 # _Doctor's Office_
 
-#### By Eliot Gronstal, Kai Clausen, Molly Donegan
+#### By Molly Donegan
 
 #### _An MVC web application to keep track of machine repairs._
 
