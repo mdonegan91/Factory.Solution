@@ -44,6 +44,14 @@ A factory manager can use the website to do the following:
 ```
 * _If you'd like to push this cloned project to a public-facing repository, remember to add the appsettings.json file to your .gitignore first._
 
+## Entity Framework Migration Configuration
+
+* _In root directory of project folder "Factory",  run $ dotnet ef database update_
+* _Open SQL Workbench._
+* _Navigate to "factory" schema._
+* _Click the drop down, select "Tables" drop down._
+* _Verify the tables. There should be: engineers, engineermachines, and machines._
+
 ## Known Bugs
 
 * _NA_
