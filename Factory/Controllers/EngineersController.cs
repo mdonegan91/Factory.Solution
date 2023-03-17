@@ -23,6 +23,7 @@ namespace Factory.Controllers
                             .ToList();
       return View(model);
     }
+    
     public ActionResult Create()
     {
       ViewBag.SpecialtyId = new SelectList(_db.Specialties, "SpecialtyId", "SpecialtyName");

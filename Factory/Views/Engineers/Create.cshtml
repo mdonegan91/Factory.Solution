@@ -8,9 +8,9 @@
 @using (Html.BeginForm())
 {
   <p>Engineer Name: @Html.TextBoxFor(model => model.EngineerName) <input type="submit" value="Add new Engineer"/></p>
-
-  @Html.ValidationMessageFor(model => model.EngineerName, "", new { @class = "text-danger", @style = "font-weight: 600;" })
 }
+
+<p>@Html.ValidationMessageFor(model => model.EngineerName, "", new { @class = "text-danger", @style = "font-weight: 600;" })</p>
 
 <br>
 <div id="nav-links">

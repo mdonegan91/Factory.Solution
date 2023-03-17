@@ -18,6 +18,8 @@
     <input type="submit" value="Add new Machine"/>
 }
 
+<p>@Html.ValidationMessageFor(model => model.MachineName, "", new { @class = "text-danger", @style = "font-weight: 600;" })</p>
+
 <br>
 <div id="nav-links">
   <p>@Html.ActionLink("Back to List of Machines", "Index")</p>

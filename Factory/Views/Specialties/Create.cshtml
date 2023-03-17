@@ -4,15 +4,14 @@
 
 @model Factory.Models.Specialty
 
-<p>@Html.ValidationMessageFor(model => model.SpecialtyId, "", new { @class = "text-danger", @style = "font-weight: 600",})</p>
-<p>@Html.ValidationMessageFor(model => model.SpecialtyName, "", new { @class = "text-danger", @style = "font-weight: 600",})</p>
-
 <h4>Add a new Specialty</h4>
 @using (Html.BeginForm())
 {
   <p>Specialty Name: @Html.TextBoxFor(model => model.SpecialtyName)</p>
   <input type="submit" value="Add new specialty" />
 }
+
+<p>@Html.ValidationMessageFor(model => model.SpecialtyName, "", new { @class = "text-danger", @style = "font-weight: 600;" })</p>
 
 <br>
 <div id="nav-links">
