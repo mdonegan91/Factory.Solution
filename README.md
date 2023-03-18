@@ -57,4 +57,4 @@ _Please reach out with any questions or concerns [mollyrdonegan@gmail.com](molly
 
 _[MIT](https://github.com/mdonegan91/Factory.Solution/blob/main/LICENSE)_
 
-Copyright (c) _2023_ _Molly Donegan_
+Copyright (c) _2023 Molly Donegan_
