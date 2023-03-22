@@ -38,7 +38,7 @@ Install the tools that are introduced in [this series of lessons on LearnHowToPr
 ```json
 {
   "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database=factory;uid=root;pwd=epicodus;"
+      "DefaultConnection": "Server=localhost;Port=3306;database=factory;uid=[YOUR-USERNAME];pwd=[YOUR-PASSWORD];"
   }
 }
 ```
